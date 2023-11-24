@@ -7,7 +7,7 @@
   font-family: "Rubik";
 }
 
-body {
+html {
   background: rgb(14, 129, 10);
   background: linear-gradient(
     90deg,
@@ -15,6 +15,17 @@ body {
     rgba(12, 139, 166, 0.47102591036414565) 49%,
     rgba(0, 255, 239, 0.6082808123249299) 100%
   );
+}
+
+.loadingSpinner {
+  position: fixed;
+  margin-inline: auto;
+  margin-block: auto;
+  inset-inline: 0;
+  margin-top: 40px;
+  /* inset-block: 0; */
+  text-align: center;
+  z-index: 10;
 }
 
 .card {
@@ -44,14 +55,19 @@ body {
   border: none;
   height: 3rem;
   aspect-ratio: 1;
+  font-size: 1.3rem;
   border-radius: 50%;
+}
+
+.inputButton:hover {
+  color: red;
 }
 
 .weatherInput {
   background-color: cornsilk;
-  padding: 0.3rem;
+  padding: 0.4rem;
   border: none;
-  height: 1.7rem;
+  font-size: 1.8rem;
   border-radius: 2rem;
   min-width: 1rem;
   height: inherit;
@@ -68,6 +84,18 @@ body {
   color: cornsilk;
   font-size: 4rem;
   text-align: center;
+  padding-inline: 3rem;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+
+.temperature {
+  display: block;
+  color: cornsilk;
+  text-align: center;
+  margin-top: 4rem;
+  padding-inline: 3rem;
+  font-size: 2.5rem;
 }
 
 .infoSection {
