@@ -1,38 +1,104 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(14, 129, 10);
+  background: linear-gradient(
+    90deg,
+    rgba(14, 129, 10, 0.577468487394958) 1%,
+    rgba(12, 139, 166, 0.47102591036414565) 49%,
+    rgba(0, 255, 239, 0.6082808123249299) 100%
+  );
+}
+
+.card {
+  display: block;
+  margin-top: 2rem;
+  margin-inline: auto;
+  max-width: 20rem;
+  border-radius: 20px;
+  background: linear-gradient(
+    170deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.inputSection {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.inputButton {
+  border: none;
+  height: 1.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.weatherInput {
+  font-family: "ubuntu";
+  padding: 0.3rem;
+  border: none;
+  height: 1.7rem;
+  border-radius: 15px;
+  min-width: 1rem;
+  max-width: 10rem;
+  height: inherit;
+  flex-grow: 1;
+}
+
+.weatherIcon {
+  display: block;
+  margin-inline: auto;
+  width: 9rem;
+}
+
+.cityName {
+  color: white;
+  font-size: 2rem;
+  font-family: "Ubuntu";
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.infoSection {
   color: white;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.7rem;
+  bottom: 0;
+  font-size: 1.4rem;
 }
 
-.App-link {
-  color: #61dafb;
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 15px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 400px) {
+  * {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  * {
+    font-size: 13px;
   }
 }

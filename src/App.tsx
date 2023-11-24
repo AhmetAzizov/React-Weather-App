@@ -1,25 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { IoSearch } from "react-icons/io5";
+import { MdOutlineWaves } from "react-icons/md";
+import { FaWind } from "react-icons/fa";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="card">
+        <div className="inputSection">
+          <input className='weatherInput' />
+          <button className='inputButton'><IoSearch /></button>
+        </div>
+
+        <img className='weatherIcon' src="https://openweathermap.org/img/wn/10d@2x.png" alt='weather icon' />
+
+        <p className='cityName'>New York</p>
+
+        <div className="infoSection">
+          <div className="info humidity">
+            <MdOutlineWaves />
+            <p className="infoValue">45%</p>
+          </div>
+          <div className="info windSpeed">
+            <FaWind />
+            <p className="infoValue">14 km/h</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
