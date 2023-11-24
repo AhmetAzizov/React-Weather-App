@@ -13,7 +13,7 @@ function App() {
           <button className='inputButton'><IoSearch /></button>
         </div>
 
-        <img className='weatherIcon' src="https://openweathermap.org/img/wn/10d@2x.png" alt='weather icon' />
+        <img className='weatherIcon' src="https://openweathermap.org/img/wn/04d@2x.png" alt='weather icon' />
 
         <p className='cityName'>New York</p>
 
