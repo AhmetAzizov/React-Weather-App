@@ -29,8 +29,7 @@ html {
 }
 
 .card {
-  display: block;
-  margin-top: 2rem;
+  margin-block: 2rem;
   margin-inline: auto;
   max-width: 35rem;
   border-radius: 3rem;
@@ -45,9 +44,23 @@ html {
 
 .inputSection {
   display: flex;
-  padding: 2rem 4rem 0 4rem;
+  margin-inline: auto;
+  padding-inline: 3rem;
+  margin-top: 3rem;
   justify-content: center;
   gap: 1rem;
+  max-width: 35rem;
+}
+
+.weatherInput {
+  background-color: cornsilk;
+  padding: 0.2rem 1.5rem 0.2rem 1.5rem;
+  border: none;
+  font-size: 1.8rem;
+  border-radius: 2rem;
+  min-width: 1rem;
+  height: inherit;
+  flex-grow: 1;
 }
 
 .inputButton {
@@ -61,17 +74,6 @@ html {
 
 .inputButton:hover {
   color: red;
-}
-
-.weatherInput {
-  background-color: cornsilk;
-  padding: 0.4rem;
-  border: none;
-  font-size: 1.8rem;
-  border-radius: 2rem;
-  min-width: 1rem;
-  height: inherit;
-  flex-grow: 1;
 }
 
 .weatherIcon {
@@ -107,11 +109,16 @@ html {
   bottom: 0;
 }
 
-.info {
-  font-size: 2rem;
+.infoLabel {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.valueIconWrapper {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.5rem;
+  font-size: 2rem;
 }
 
 @media only screen and (max-width: 1200px) {

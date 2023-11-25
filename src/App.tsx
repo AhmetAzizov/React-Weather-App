@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import OpenWeatherMap from 'openweathermap-ts';
 import { CurrentResponse } from 'openweathermap-ts/dist/types';
+import InfoComponent from './components/InfoComponent';
 
 const openWeather = new OpenWeatherMap({
   apiKey: process.env.REACT_APP_OPENWEATHER_API_KEY!
@@ -85,11 +86,12 @@ function App() {
 
       {!loading && weatherData &&
         <>
+          <div className="inputSection">
+            <input className='weatherInput' placeholder='Search for a City' />
+            <button className='inputButton'><IoSearch /></button>
+          </div>
+
           <div className="card">
-            <div className="inputSection">
-              <input className='weatherInput' />
-              <button className='inputButton'><IoSearch /></button>
-            </div>
 
             <img className='weatherIcon' src={weatherIcon} alt='weather icon' />
 
@@ -98,14 +100,14 @@ function App() {
 
 
             <div className="infoSection">
-              <div className="info humidity">
-                <MdOutlineWaves />
-                <p className="infoValue">{weatherData.main.humidity + " %"}</p>
-              </div>
-              <div className="info windSpeed">
-                <FaWind />
-                <p className="infoValue">{weatherData.wind.speed + " km/h"}</p>
-              </div>
+              <InfoComponent
+                data={weatherData.main.humidity.toString()}
+                Icon={MdOutlineWaves}
+              />
+              <InfoComponent
+                data={weatherData.wind.speed.toString()}
+                Icon={FaWind}
+              />
             </div>
           </div>
         </>
