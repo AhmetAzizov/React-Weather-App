@@ -7,14 +7,8 @@
   font-family: "Rubik";
 }
 
-html {
-  background: rgb(14, 129, 10);
-  background: linear-gradient(
-    90deg,
-    rgba(14, 129, 10, 0.577468487394958) 1%,
-    rgba(12, 139, 166, 0.47102591036414565) 49%,
-    rgba(0, 255, 239, 0.6082808123249299) 100%
-  );
+body {
+  background-color: silver;
 }
 
 .loadingSpinner {
@@ -23,15 +17,60 @@ html {
   margin-block: auto;
   inset-inline: 0;
   margin-top: 40px;
-  /* inset-block: 0; */
   text-align: center;
-  z-index: 10;
+}
+
+.inputSection {
+  display: flex;
+  margin-inline: auto;
+  padding-inline: 3rem;
+  margin-block: 4rem;
+  justify-content: center;
+  gap: 1rem;
+  max-width: 40rem;
+}
+
+.weatherInput {
+  background-color: cornsilk;
+  padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+  border: none;
+  font-size: 2.2rem;
+  border-radius: 2rem;
+  height: 4rem;
+  min-width: 1rem;
+  flex-grow: 1;
+}
+
+.inputButton {
+  background-color: cornsilk;
+  color: gray;
+  border: none;
+  height: 4rem;
+  aspect-ratio: 1;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.inputButton:hover {
+  transform: translateY(-4px);
+}
+
+.mainWrapper {
+  display: flex;
+  padding-inline: 1.5rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contentWrapper {
+  width: clamp(250px, 100%, 40rem);
+  min-height: 50rem;
 }
 
 .card {
-  margin-block: 2rem;
-  margin-inline: auto;
-  max-width: 35rem;
   border-radius: 3rem;
   background: linear-gradient(
     170deg,
@@ -40,85 +79,66 @@ html {
     rgba(0, 212, 255, 1) 100%
   );
   box-shadow: 0px 0px 94px -4px rgba(0, 0, 0, 0.75);
+  padding-inline: 1rem;
 }
 
-.inputSection {
+.primaryWrapper {
   display: flex;
-  margin-inline: auto;
-  padding-inline: 3rem;
-  margin-top: 3rem;
-  justify-content: center;
-  gap: 1rem;
-  max-width: 35rem;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.weatherInput {
-  background-color: cornsilk;
-  padding: 0.2rem 1.5rem 0.2rem 1.5rem;
-  border: none;
-  font-size: 1.8rem;
-  border-radius: 2rem;
-  min-width: 1rem;
-  height: inherit;
-  flex-grow: 1;
-}
-
-.inputButton {
-  background-color: cornsilk;
-  border: none;
-  height: 3rem;
-  aspect-ratio: 1;
-  font-size: 1.3rem;
-  border-radius: 50%;
-}
-
-.inputButton:hover {
-  color: red;
+.secondaryWrapper {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  background: none;
+  box-shadow: none;
 }
 
 .weatherIcon {
   display: block;
   margin-inline: auto;
-  width: 20rem;
+  height: 15rem;
+}
+
+.weatherDescription {
+  text-align: center;
+  color: cornsilk;
+  margin: 0 0 3rem 0;
+  font-size: 3rem;
+}
+
+.weatherDetails {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .cityName {
   color: cornsilk;
-  font-size: 4rem;
+  font-size: 5rem;
   text-align: center;
   padding-inline: 3rem;
   word-break: keep-all;
   word-wrap: break-word;
 }
 
-.temperature {
+.main-info {
   display: block;
   color: cornsilk;
   text-align: center;
-  margin-top: 4rem;
   padding-inline: 3rem;
-  font-size: 2.5rem;
+  font-size: 3rem !important;
+  margin-inline: auto;
 }
 
-.infoSection {
-  color: cornsilk;
-  margin-top: 7rem;
+.infoWrapper {
   display: flex;
-  justify-content: space-between;
-  padding: 0 4rem 3rem 4rem;
-  bottom: 0;
-}
-
-.infoLabel {
-  font-size: 1rem;
-  text-align: center;
-}
-
-.valueIconWrapper {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -148,5 +168,11 @@ html {
 @media only screen and (max-width: 400px) {
   :root {
     font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  :root {
+    font-size: 10px;
   }
 }
